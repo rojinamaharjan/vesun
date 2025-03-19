@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - /bin/bash -c "cd $PWD && npm install"
+    - /bin/bash -c "cd $PWD && npm run dev"
+    - /bin/bash -c "rm -rf ../public_html/*"
+    - /bin/bash -c "cp -r build/* ../public_html/"
